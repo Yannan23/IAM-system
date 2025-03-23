@@ -4,7 +4,7 @@ import Roles from "./components/Roles"
 import UnassignedUsers from "./components/UnassignedUsers"
 
 const App = () => (
-    <div className="bg-red-300 max-w-[1280px] mx-auto py-16 px-32">
+    <div className="max-w-[1280px] mx-auto py-16 px-32">
         <Header />
         <div className="flex">
             <div className="basis-2/3">
