@@ -5,6 +5,9 @@ import UnassignedUsers from "./components/UnassignedUsers"
 
 const App = () => (
     <div className="max-w-[1280px] mx-auto py-16 px-32">
+
+        <CreateIAMModal />
+
         <Header />
         <div className="flex mt-4">
             <div className="basis-2/3">
@@ -14,7 +17,6 @@ const App = () => (
                 <UnassignedUsers />
             </div>
         </div>
-        {/* <CreateIAMModal /> */}
     </div>
 )
 

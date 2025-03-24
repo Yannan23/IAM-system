@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 const User = styled.button`
+    background-color: white;
     cursor:pointer;
     border:1px solid var(--border-color);
     padding:8px 16px;

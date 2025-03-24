@@ -1,4 +1,4 @@
-import Users from "./components/Users";
+import Users from "../../../Users";
 import styles from './Role.module.css'
 
 const Role = ({ name, child, users }) => (
