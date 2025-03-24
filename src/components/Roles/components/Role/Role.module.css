@@ -1,0 +1,15 @@
+.container {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 8px 16px;
+    width: fit-content;
+
+    &>*:not(:last-child) {
+        margin-bottom: 8px;
+    }
+}
+
+.name {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+}
