@@ -1,12 +1,12 @@
-import Users from "../Users"
+import React from 'react'
+import styled from 'styled-components'
+import Role from '../Roles/components/Role/Role'
+import RoleContainer from '../StyledComponents/RoleContainer'
 
-const UnassignedUsers = () => (
-    <div className="ml-4 bg-gray-100 h-full p-4">
-        <div className="mb-4">UnassignedUsers</div>
-        <div>
-            <Users data={['Alice', 'Amy', 'Lemon']} />
-        </div>
-    </div>
-)
-
-export default UnassignedUsers
+export default function UnassignedUsers() {
+    return (
+        <RoleContainer variant='gray'>
+            <Role name='UnassignedUsers' users={['Bob', 'Leo', 'Stephanie']} />
+        </RoleContainer>
+    )
+}

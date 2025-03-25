@@ -1,23 +1,23 @@
 import Role from "./components/Role/Role";
-import styles from './Roles.module.css'
+import RoleContainer from "../StyledComponents/RoleContainer";
 
 
-const Roles = () => (
-    <div className={styles.container}>
-        <Role
-            name='User'
-            users={['Alice', 'Bob']}
-            child={{
-                name: 'System Manager',
-                users: ['daisy', 'LuLu', 'Jane'],
-                child: {
-                    name: 'Admin',
-                    users: ['Bear', 'Gummy', 'Danny', 'Sun']
-                }
-            }}
-        />
-        <Role name='Service' users={['Kim', 'Charlie']} />
-    </div>
-)
+const Roles = () => {
+    return (
+        <div>
+            <RoleContainer>
+                <Role
+                    name='User'
+                    users={['Lulu', 'Lucy', 'Jason']}
+                />
+
+            </RoleContainer>
+            <RoleContainer>
+                <Role name='Service' users={['Jason', 'Lucia']} />
+            </RoleContainer>
+
+        </div>
+    )
+}
 
 export default Roles;

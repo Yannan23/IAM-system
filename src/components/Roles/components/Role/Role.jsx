@@ -1,15 +1,24 @@
-import Users from "../../../Users";
-import styles from './Role.module.css'
+import Button from "../../../StyledComponents/Button"
+import ButtonContainer from "../../../StyledComponents/ButtonContainer"
+import styled from "styled-components"
 
-const Role = ({ name, child, users }) => (
-    <div className={styles.container}>
-        <div className={styles.name}>
-            {name}
+const Name = styled.div`
+    border-bottom: 1px solid lightgray;
+    padding: 0.5rem 0;
+    margin-bottom:1rem;
+`
+
+const Role = ({ name, users }) => {
+    return (
+        <div>
+            <Name>{name}</Name>
+            <ButtonContainer>
+                {users.map((user) => {
+                    return <Button key={user}>{user}</Button>
+                })}
+            </ButtonContainer>
         </div>
-        <div className="flex gap-4">
-            {child && <Role child={child.child} name={child.name} users={child.users} />}
-            <Users data={users} />
-        </div>
-    </div>
-)
-export default Role;
+    )
+}
+
+export default Role

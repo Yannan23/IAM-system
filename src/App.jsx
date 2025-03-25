@@ -1,23 +1,38 @@
-import CreateIAMModal from "./components/CreateIAMModal"
-import Header from "./components/Header"
-import Roles from "./components/Roles"
-import UnassignedUsers from "./components/UnassignedUsers"
+import React from 'react'
+import Header from './components/Header'
+import Users from './components/Users'
+import UnassignedUsers from './components/UnassignedUsers'
+import styled from 'styled-components'
+import Roles from './components/Roles/Roles'
 
-const App = () => (
-    <div className="max-w-[1280px] mx-auto py-16 px-32">
+const Container = styled.div`
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+`
+const HeaderContainer = styled.div`
+    display: flex;
+    border-bottom: 1px solid gray;
+    min-height: 10vh;
+    align-items: center;
+    justify-content: right;
+`
+const Body = styled.div`
+    max-width: 1080px;
+    margin: auto;
+    padding: 0 1rem;
+`
 
-        <CreateIAMModal />
-
-        <Header />
-        <div className="flex mt-4">
-            <div className="basis-2/3">
+export default function App() {
+    return (
+        <Body>
+            <HeaderContainer>
+                <Header />
+            </HeaderContainer>
+            <Container >
                 <Roles />
-            </div>
-            <div className="basis-1/3">
                 <UnassignedUsers />
-            </div>
-        </div>
-    </div>
-)
-
-export default App
+            </Container>
+        </Body>
+    )
+}

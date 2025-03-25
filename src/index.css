@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
 :root {
-    --border-color: #d1d5dc;
-    --border-radius: 10px;
+    --background-color: #ebeaea;
 }

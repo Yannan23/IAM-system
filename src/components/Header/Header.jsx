@@ -1,11 +1,10 @@
-import NewIAM from "./components/NewIAM";
+import React from 'react'
+import NewButton from './components/NewButton'
 
-const Header = () => (
-    <div>
-        <div className="border-b-1 border-gray-400 py-3">
-            <NewIAM />
+export default function Header() {
+    return (
+        <div>
+            <NewButton />
         </div>
-    </div>
-)
-
-export default Header;
+    )
+}
