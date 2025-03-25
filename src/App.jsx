@@ -13,7 +13,7 @@ const Container = styled.div`
 const HeaderContainer = styled.div`
     display: flex;
     border-bottom: 1px solid gray;
-    min-height: 10vh;
+    min-height: 7vh;
     align-items: center;
     justify-content: right;
 `
